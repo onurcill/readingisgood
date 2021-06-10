@@ -16,8 +16,8 @@ import java.util.Optional;
 @Service
 public class BookServiceImpl implements BookService {
 
-    private BookRepository bookRepository;
-    private ServiceBookMapper serviceBookMapper = ServiceBookMapper.INSTANCE;
+    private final BookRepository bookRepository;
+    private final ServiceBookMapper serviceBookMapper = ServiceBookMapper.INSTANCE;
 
     @Autowired
     public BookServiceImpl(BookRepository bookRepository) {
