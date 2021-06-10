@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>reading-is-good-parent</artifactId>
+        <groupId>com.getir</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../reading-is-good-parent</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>reading-is-good-app</artifactId>
+    <packaging>jar</packaging>
+    <name>ReadingIsGood Project App Module</name>
+    <properties>
+        <spring.boot-version>2.5.0</spring.boot-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.getir</groupId>
+            <artifactId>reading-is-good-rest</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.0</version>
+                <configuration>
+                    <mainClass>com.getir.readingisgood.ReadingIsGoodApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
