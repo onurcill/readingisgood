@@ -24,4 +24,6 @@ public interface OrderRepository extends PagingAndSortingRepository<OrderEntity,
             + "where o.customer.id = :id "
             + "group by MONTH(o.dateCreated), YEAR(dateCreated)")
     List<OrderStatistics> findStatisticsByCustomerId(Long id);
+
+
 }

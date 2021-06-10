@@ -20,8 +20,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class CustomerServiceImpl implements CustomerService {
 
-    private CustomerRepository customerRepository;
-    private CustomerMapper customerMapper = CustomerMapper.INSTANCE;
+    private final CustomerRepository customerRepository;
+    private final CustomerMapper customerMapper = CustomerMapper.INSTANCE;
     private static final Logger logger = LogManager.getLogger(CustomerServiceImpl.class);
 
     @Autowired
