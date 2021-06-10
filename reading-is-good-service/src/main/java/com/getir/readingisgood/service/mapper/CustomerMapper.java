@@ -10,5 +10,6 @@ import org.mapstruct.factory.Mappers;
 public abstract class CustomerMapper {
     public static final CustomerMapper INSTANCE = Mappers.getMapper(CustomerMapper.class);
     public abstract CustomerDto toCustomerDtoFromCustomerEntity(CustomerEntity entity);
+    public abstract CustomerEntity toCustomerEntityFromCustomerDto(CustomerDto customerDto);
 }
 
