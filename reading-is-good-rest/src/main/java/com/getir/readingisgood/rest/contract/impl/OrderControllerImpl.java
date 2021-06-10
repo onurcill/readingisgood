@@ -1,6 +1,6 @@
-package com.getir.readingisgood.contract.impl;
+package com.getir.readingisgood.rest.contract.impl;
 
-import com.getir.readingisgood.contract.OrderController;
+import com.getir.readingisgood.rest.contract.OrderController;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
