@@ -111,7 +111,7 @@ This is a step-by-step guide how to build and run the project using Docker.
     - docker run -p 8080:8080 readingisgood-docker
 - Once you run the server you can access the project at port 8080.
 - You can see API documentation http://localhost:8080/swagger-ui.html
-- To access endpoints you need the first call <b>authentication/login</b> request. This will genereate token and set the environment value.
+- To access endpoints you need the first call <b>/api/v1/authorization</b> request. This will genereate token and set the environment value.
 - Then you can call other APIs.
 
 
