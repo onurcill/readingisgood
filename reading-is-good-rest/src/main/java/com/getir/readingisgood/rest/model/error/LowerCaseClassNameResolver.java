@@ -1,8 +1,12 @@
-package com.getir.readingisgood.rest.error;
+package com.getir.readingisgood.rest.model.error;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.jsontype.impl.TypeIdResolverBase;
 
+/**
+ * @Author onurc
+ * @create 6/11/2021 2:49 PM
+ */
 public class LowerCaseClassNameResolver extends TypeIdResolverBase {
 
     @Override

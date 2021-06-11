@@ -1,6 +1,6 @@
 package com.getir.readingisgood.rest.handler;
 
-import com.getir.readingisgood.rest.error.ApiError;
+import com.getir.readingisgood.rest.model.error.ApiError;
 import com.getir.readingisgood.service.exception.BadRequestException;
 import com.getir.readingisgood.service.exception.BookStockException;
 import com.getir.readingisgood.service.exception.ResourceNotFoundException;
@@ -30,6 +30,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
 
+/**
+ * @Author onurc
+ * @create 6/11/2021 2:45 PM
+ */
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {
