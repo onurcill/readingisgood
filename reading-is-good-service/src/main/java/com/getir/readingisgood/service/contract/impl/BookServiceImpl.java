@@ -26,18 +26,16 @@ public class BookServiceImpl implements BookService {
 
     @Override
     @Transactional
-    public BookDto createBook(BookDto bookDto) {
-        BookEntity entity = bookRepository.save(serviceBookMapper.toBookEntityFromBookDto(bookDto));
-        return serviceBookMapper.toBookDtoFromBookEntity(entity);
+    public void createBook(BookDto bookDto) {
+        bookRepository.save(serviceBookMapper.toBookEntityFromBookDto(bookDto));
     }
 
     @Override
-    public BookDto updateBook(Long id, BookDto bookDto) {
+    public void updateBook(Long id, BookDto bookDto) {
         Optional<BookEntity> bookFromDb = Optional.ofNullable(
                 bookRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(ErrorEnum.BOOK_NOT_FOUND, id)));
 
         bookFromDb.get().setUnitsInStock(bookDto.getUnitsInStock());
-        BookEntity entity = bookRepository.save(bookFromDb.get());
-        return serviceBookMapper.toBookDtoFromBookEntity(entity);
+        bookRepository.save(bookFromDb.get());
     }
 }
