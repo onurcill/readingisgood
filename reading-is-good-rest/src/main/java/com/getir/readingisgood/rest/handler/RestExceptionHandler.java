@@ -1,6 +1,7 @@
 package com.getir.readingisgood.rest.handler;
 
 import com.getir.readingisgood.rest.error.ApiError;
+import com.getir.readingisgood.service.exception.BadRequestException;
 import com.getir.readingisgood.service.exception.BookStockException;
 import com.getir.readingisgood.service.exception.ResourceNotFoundException;
 import org.apache.logging.log4j.LogManager;
@@ -135,6 +136,20 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(BookStockException.class)
     protected ResponseEntity<Object> handleStockNotFound(
             BookStockException ex) {
+        ApiError apiError = new ApiError(NOT_FOUND);
+        apiError.setMessage(ex.getMessage());
+        return buildResponseEntity(apiError);
+    }
+
+    /**
+     * Handles BadRequestException.
+     *
+     * @param ex the BadRequestException
+     * @return the ApiError object
+     */
+    @ExceptionHandler(BadRequestException.class)
+    protected ResponseEntity<Object> handleBadRequest(
+            BadRequestException ex) {
         ApiError apiError = new ApiError(NOT_FOUND);
         apiError.setMessage(ex.getMessage());
         return buildResponseEntity(apiError);
