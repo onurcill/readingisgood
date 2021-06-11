@@ -1,4 +1,4 @@
-package com.getir.readingisgood.rest.error;
+package com.getir.readingisgood.rest.model.error;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

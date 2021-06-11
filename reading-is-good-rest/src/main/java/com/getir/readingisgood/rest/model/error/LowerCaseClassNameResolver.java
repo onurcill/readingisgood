@@ -1,4 +1,4 @@
-package com.getir.readingisgood.rest.error;
+package com.getir.readingisgood.rest.model.error;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.jsontype.impl.TypeIdResolverBase;

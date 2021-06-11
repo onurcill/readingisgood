@@ -1,6 +1,6 @@
 package com.getir.readingisgood.rest.handler;
 
-import com.getir.readingisgood.rest.error.ApiError;
+import com.getir.readingisgood.rest.model.error.ApiError;
 import com.getir.readingisgood.service.exception.BadRequestException;
 import com.getir.readingisgood.service.exception.BookStockException;
 import com.getir.readingisgood.service.exception.ResourceNotFoundException;
