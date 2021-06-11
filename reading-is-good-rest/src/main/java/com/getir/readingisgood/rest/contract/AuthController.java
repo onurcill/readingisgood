@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Validated
-@RequestMapping("/api/v1/authentication")
+@RequestMapping("/api/v1/authorization")
 @Api(tags = "Authorization")
 public interface AuthController {
 
-    @PostMapping("/login")
+    @PostMapping
     String login(@RequestParam("email") String email, @RequestParam("password") String pwd);
 }

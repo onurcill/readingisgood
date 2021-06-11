@@ -4,6 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+/**
+ * @Author onurc
+ * @create 6/11/2021 2:41 PM
+ */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @AllArgsConstructor
