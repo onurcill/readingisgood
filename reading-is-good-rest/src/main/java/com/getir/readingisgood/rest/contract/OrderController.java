@@ -1,5 +1,6 @@
 package com.getir.readingisgood.rest.contract;
 
+import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.rest.model.OrderResponse;
 import com.getir.readingisgood.rest.model.PurchaseRequest;
 import com.getir.readingisgood.rest.model.PurchaseResponse;
@@ -19,12 +20,12 @@ import java.util.List;
 @Api(tags = "Order")
 public interface OrderController {
     @PostMapping
-    ResponseEntity<PurchaseResponse> processOrder(@RequestBody @Valid PurchaseRequest purchaseRequest);
+    ResponseEntity<GenericResponse> processOrder(@RequestBody @Valid PurchaseRequest purchaseRequest);
 
     @GetMapping("/{id}")
-    ResponseEntity<OrderResponse> getOrderById(@PathVariable Long id);
+    ResponseEntity<GenericResponse> getOrderById(@PathVariable Long id);
 
     @GetMapping
-    ResponseEntity<List<OrderResponse>> getOrdersByDateInterval(@RequestParam("startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startDate,
+    ResponseEntity<GenericResponse> getOrdersByDateInterval(@RequestParam("startDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startDate,
                                                                 @RequestParam("endDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)  LocalDateTime endDate, Pageable pageable);
 }

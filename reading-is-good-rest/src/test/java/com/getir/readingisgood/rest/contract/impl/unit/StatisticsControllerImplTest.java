@@ -2,6 +2,7 @@ package com.getir.readingisgood.rest.contract.impl.unit;
 
 import com.getir.readingisgood.rest.contract.impl.StatisticsControllerImpl;
 import com.getir.readingisgood.rest.mapper.OrderStatisticsMapper;
+import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.rest.model.StatisticsResponse;
 import com.getir.readingisgood.service.contract.StatisticsService;
 import com.getir.readingisgood.service.model.OrderStatisticsDto;
@@ -41,7 +42,7 @@ public class StatisticsControllerImplTest {
         when(statisticsService.getStatisticsByCustomerId(anyLong())).thenReturn(Arrays.<OrderStatisticsDto>asList(new OrderStatisticsDto()));
         when(orderStatisticsMapper.toListOfStatisticsResponse(any())).thenReturn(Arrays.<StatisticsResponse>asList(new StatisticsResponse(0L, new BigDecimal(0), 0L, 0)));
 
-        ResponseEntity<List<StatisticsResponse>> result = statisticsControllerImpl.getCustomerMonthlyStatistics(Long.valueOf(1));
-        Assert.assertEquals(200, result.getStatusCode().value());
+        ResponseEntity<GenericResponse> result = statisticsControllerImpl.getCustomerMonthlyStatistics(Long.valueOf(1));
+        Assert.assertEquals(200, result.getStatusCodeValue());
     }
 }

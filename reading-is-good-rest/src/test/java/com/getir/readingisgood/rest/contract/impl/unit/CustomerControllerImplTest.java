@@ -5,6 +5,7 @@ import com.getir.readingisgood.rest.contract.impl.CustomerControllerImpl;
 import com.getir.readingisgood.rest.mapper.CustomerMapper;
 import com.getir.readingisgood.rest.mapper.OrderMapper;
 import com.getir.readingisgood.rest.model.CustomerResponse;
+import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.rest.model.OrderResponse;
 import com.getir.readingisgood.service.contract.CustomerService;
 import com.getir.readingisgood.service.model.CustomerDto;
@@ -62,7 +63,7 @@ public class CustomerControllerImplTest {
         when(customerMapper.toCustomerResponseFromCustomerDto(any())).thenReturn(new CustomerResponse(Long.valueOf(1), "firstName", "lastName", "email", "phone", LocalDateTime.of(2021, Month.JUNE, 12, 15, 8, 16).toInstant(ZoneOffset.UTC)));
         when(customerService.registerCustomer(any())).thenReturn(new CustomerDto(Long.valueOf(1), "firstName", "lastName", "email", "phone", LocalDateTime.of(2021, Month.JUNE, 12, 15, 8, 16).toInstant(ZoneOffset.UTC), new HashSet<OrderDto>(Arrays.asList(new OrderDto()))));
 
-        ResponseEntity<CustomerResponse> result = customerControllerImpl.createCustomer(null);
+        ResponseEntity<GenericResponse> result = customerControllerImpl.createCustomer(null);
         Assert.assertEquals(201, result.getStatusCode().value());
     }
 
@@ -73,7 +74,7 @@ public class CustomerControllerImplTest {
         when(orderMapper.toPageOrderResponseFromOrderDto(any())).thenReturn(Arrays.<OrderResponse>asList(new OrderResponse(Long.valueOf(1), "orderTrackingNumber", 0, new BigDecimal(0), OrderStatus.IN_PROGRESS, new GregorianCalendar(2021, Calendar.JUNE, 12, 15, 8).getTime(), new GregorianCalendar(2021, Calendar.JUNE, 12, 15, 8).getTime(), "customerEmail")));
         when(customerService.getOrdersByCustomerId(anyLong(), any())).thenReturn(orderDtos);
 
-        ResponseEntity<List<OrderResponse>> result = customerControllerImpl.getOrdersByCustomerId(Long.valueOf(1), null);
+        ResponseEntity<GenericResponse> result = customerControllerImpl.getOrdersByCustomerId(Long.valueOf(1), null);
         Assert.assertEquals(200, result.getStatusCode().value());
     }
 }

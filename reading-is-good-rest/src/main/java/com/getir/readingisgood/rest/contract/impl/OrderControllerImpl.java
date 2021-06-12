@@ -2,6 +2,7 @@ package com.getir.readingisgood.rest.contract.impl;
 
 import com.getir.readingisgood.rest.contract.OrderController;
 import com.getir.readingisgood.rest.mapper.OrderMapper;
+import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.rest.model.OrderResponse;
 import com.getir.readingisgood.rest.model.PurchaseRequest;
 import com.getir.readingisgood.rest.model.PurchaseResponse;
@@ -33,25 +34,38 @@ public class OrderControllerImpl implements OrderController {
     }
 
     @Override
-    public ResponseEntity<PurchaseResponse> processOrder(PurchaseRequest purchaseRequest) {
+    public ResponseEntity<GenericResponse> processOrder(PurchaseRequest purchaseRequest) {
         PurchaseDto purchase = orderMapper.toPurchaseDto(purchaseRequest);
         purchase = orderService.placeOrder(purchase);
         logger.info("Order placed from {}",purchaseRequest.getCustomer().getFirstName());
-        return ResponseEntity.status(HttpStatus.CREATED)
-                .body(orderMapper.toPurchaseResponse(purchase));
+
+        return ResponseEntity.ok(GenericResponse.builder()
+                .data(orderMapper.toPurchaseResponse(purchase))
+                .success(true)
+                .message("Order placed")
+                .build());
     }
 
     @Override
-    public ResponseEntity<OrderResponse> getOrderById(Long id) {
+    public ResponseEntity<GenericResponse> getOrderById(Long id) {
         OrderDto order = orderService.getOrderById(id);
         logger.info("Order information retrieved {}",order.getId());
-        return ResponseEntity.ok(orderMapper.toOrderResponse(order));
+
+        return ResponseEntity.ok(GenericResponse.builder()
+                .data(orderMapper.toOrderResponse(order))
+                .success(true)
+                .message("Order info is returned")
+                .build());
     }
 
     @Override
-    public ResponseEntity<List<OrderResponse>> getOrdersByDateInterval(LocalDateTime startDate, LocalDateTime endDate, Pageable pageable) {
+    public ResponseEntity<GenericResponse> getOrdersByDateInterval(LocalDateTime startDate, LocalDateTime endDate, Pageable pageable) {
         List<OrderDto> orders = orderService.getOrdersByDateInterval(startDate, endDate, pageable);
         logger.info("All Order information retrieved between {} and {}",startDate,endDate);
-        return ResponseEntity.ok(orderMapper.toPageOrderResponseFromOrderDto(orders));
+        return ResponseEntity.ok(GenericResponse.builder()
+                .data(orderMapper.toPageOrderResponseFromOrderDto(orders))
+                .success(true)
+                .message("Order info is returned for given dates")
+                .build());
     }
 }

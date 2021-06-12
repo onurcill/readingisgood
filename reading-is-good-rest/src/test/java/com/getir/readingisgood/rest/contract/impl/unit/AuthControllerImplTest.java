@@ -1,6 +1,7 @@
 package com.getir.readingisgood.rest.contract.impl.unit;
 
 import com.getir.readingisgood.rest.contract.impl.AuthControllerImpl;
+import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.service.contract.AuthorizationService;
 import org.junit.Assert;
 import org.junit.Before;
@@ -32,7 +33,7 @@ public class AuthControllerImplTest {
     @Test
     public void testLogin() throws Exception {
         when(authorizationService.getJWTToken("email")).thenReturn("token");
-        ResponseEntity<String> result = authControllerImpl.login("email", "pwd");
+        ResponseEntity<GenericResponse> result = authControllerImpl.login("email", "pwd");
         Assert.assertNotNull(result);
     }
 }

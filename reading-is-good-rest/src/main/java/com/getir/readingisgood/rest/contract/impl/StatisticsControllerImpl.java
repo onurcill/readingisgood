@@ -2,7 +2,7 @@ package com.getir.readingisgood.rest.contract.impl;
 
 import com.getir.readingisgood.rest.contract.StatisticsController;
 import com.getir.readingisgood.rest.mapper.OrderStatisticsMapper;
-import com.getir.readingisgood.rest.model.StatisticsResponse;
+import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.service.contract.StatisticsService;
 import com.getir.readingisgood.service.model.OrderStatisticsDto;
 import org.apache.logging.log4j.LogManager;
@@ -27,9 +27,14 @@ public class StatisticsControllerImpl implements StatisticsController {
     }
 
     @Override
-    public ResponseEntity<List<StatisticsResponse>> getCustomerMonthlyStatistics(Long id) {
+    public ResponseEntity<GenericResponse> getCustomerMonthlyStatistics(Long id) {
         final List<OrderStatisticsDto> orders = statisticsService.getStatisticsByCustomerId(id);
         logger.info("Customer {} orders retrieved by monthly",id);
-        return ResponseEntity.ok(orderStatisticsMapper.toListOfStatisticsResponse(orders));
+
+        return ResponseEntity.ok(GenericResponse.builder()
+                .data(orderStatisticsMapper.toListOfStatisticsResponse(orders))
+                .success(true)
+                .message("Monthly statistics are returned for given customer")
+                .build());
     }
 }
