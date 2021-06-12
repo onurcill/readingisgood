@@ -14,6 +14,7 @@ vision operations.
 * Docker
 * H2 database
 * JUnit
+* Mockito
 * Mapstruct
 * JWT
 * Swagger
@@ -113,7 +114,8 @@ This is a step-by-step guide how to build and run the project using Docker.
 
 ## Postman
 
-Postman Collection is being shared within the project.
+[Postman Collection][2] is being shared within the project.
 
 [1]: https://github.com/onurcill/readingisgood
+[2]: https://raw.githubusercontent.com/onurcill/readingisgood/develop/ReadingIsGoodApiDocumentation.postman_collection.json
   
