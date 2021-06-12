@@ -4,7 +4,7 @@ import com.getir.readingisgood.service.model.BookDto;
 
 public interface BookService {
 
-    BookDto createBook(BookDto bookDto);
+    void createBook(BookDto bookDto);
 
-    BookDto updateBook(Long id, BookDto bookDto);
+    void updateBook(Long id, BookDto bookDto);
 }

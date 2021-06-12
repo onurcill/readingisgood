@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  api:
+    build: ./
+    container_name: reading-is-good-spring-docker
+    ports:
+      - "8080:8080"
