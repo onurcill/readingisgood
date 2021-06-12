@@ -1,0 +1,3 @@
+INSERT INTO customers(id, email, first_name, last_name, phone, registered_at) VALUES (1, 'test@test.com', 'test', 'test','123456',CURRENT_TIMESTAMP());
+INSERT INTO customers(id, email, first_name, last_name, phone, registered_at) VALUES (2, 'test2@test.com', 'test2', 'test2','234567',CURRENT_TIMESTAMP());
+INSERT INTO customers(id, email, first_name, last_name, phone, registered_at) VALUES (3, 'test3@test.com', 'test3', 'test3','345678',CURRENT_TIMESTAMP());
