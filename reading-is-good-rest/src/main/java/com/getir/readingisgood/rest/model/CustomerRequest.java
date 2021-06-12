@@ -1,13 +1,15 @@
 package com.getir.readingisgood.rest.model;
 
-import lombok.Builder;
-import lombok.Getter;
+import lombok.*;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 @Builder
 @Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class CustomerRequest {
 
     @NotNull(message = "Firstname cannot be empty")
