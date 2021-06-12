@@ -104,11 +104,7 @@ Follow the link to see more details of my commits. [Github][1]
 
 This is a step-by-step guide how to build and run the project using Docker.
 
-- First you need to install dependencies by running clean and install maven commands.
-- Then to build and run the project on docker, you need to run following commands:
-    - docker build -f Dockerfile -t readingisgood-docker .
-    - docker images (to see if image is build)
-    - docker run -p 8080:8080 readingisgood-docker
+- Only need run **docker-compose up** command on terminal.
 - Once you run the server you can access the project at port 8080.
 - You can see API documentation http://localhost:8080/swagger-ui.html
 - To access endpoints you need the first call <b>/api/v1/authorization</b> request. This will generate jwt token and set value to the request header with **JWT** key.
