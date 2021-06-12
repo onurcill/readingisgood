@@ -44,8 +44,7 @@ public class CustomerControllerImpl implements CustomerController {
 
     @Override
     public ResponseEntity<List<OrderResponse>> getOrdersByCustomerId(Long id, Pageable pageable) {
-        final Page<OrderDto> orders = customerService.getOrdersByCustomerId(id, pageable);
-        List<OrderDto> orderList = orders.getContent();
-        return ResponseEntity.ok(orderMapper.toPageOrderResponseFromOrderDto(orderList));
+        final List<OrderDto> orders = customerService.getOrdersByCustomerId(id, pageable);
+        return ResponseEntity.ok(orderMapper.toPageOrderResponseFromOrderDto(orders));
     }
 }

@@ -6,6 +6,8 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,10 +22,10 @@ public class AuthControllerImpl implements AuthController {
     private static final Logger logger = LogManager.getLogger(AuthControllerImpl.class);
 
     @Override
-    public String login(String email, String pwd) {
+    public ResponseEntity<String> login(String email, String pwd) {
         String token = getJWTToken(email);
         logger.debug("Customer: {} logged in with token {}", email, token);
-        return token;
+        return ResponseEntity.status(HttpStatus.OK).body(token);
     }
 
     private String getJWTToken(String username) {
