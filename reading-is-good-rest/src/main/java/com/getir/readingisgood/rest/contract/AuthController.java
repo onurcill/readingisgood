@@ -1,5 +1,6 @@
 package com.getir.readingisgood.rest.contract;
 
+import com.getir.readingisgood.rest.model.GenericResponse;
 import io.swagger.annotations.Api;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -13,5 +14,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface AuthController {
 
     @PostMapping
-    ResponseEntity<String> login(@RequestParam("email") String email, @RequestParam("password") String pwd);
+    ResponseEntity<GenericResponse> login(@RequestParam("email") String email, @RequestParam("password") String pwd);
 }

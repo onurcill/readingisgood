@@ -2,6 +2,7 @@ package com.getir.readingisgood.rest.contract.impl;
 
 import com.getir.readingisgood.rest.contract.AuthController;
 
+import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.service.contract.AuthorizationService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,9 +24,14 @@ public class AuthControllerImpl implements AuthController {
     private static final Logger logger = LogManager.getLogger(AuthControllerImpl.class);
 
     @Override
-    public ResponseEntity<String> login(String email, String pwd) {
+    public ResponseEntity<GenericResponse> login(String email, String pwd) {
         String token = authorizationService.getJWTToken(email);
         logger.info("Customer: {} logged in with token {}", email, token);
-        return ResponseEntity.status(HttpStatus.OK).body(token);
+
+        return ResponseEntity.ok(GenericResponse.builder()
+                .data(token)
+                .success(true)
+                .message("Book Created.")
+                .build());
     }
 }
