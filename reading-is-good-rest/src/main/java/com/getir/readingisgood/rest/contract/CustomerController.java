@@ -1,9 +1,7 @@
 package com.getir.readingisgood.rest.contract;
 
 import com.getir.readingisgood.rest.model.CustomerRequest;
-import com.getir.readingisgood.rest.model.CustomerResponse;
 import com.getir.readingisgood.rest.model.GenericResponse;
-import com.getir.readingisgood.rest.model.OrderResponse;
 import io.swagger.annotations.Api;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +9,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Validated
 @RequestMapping("/api/v1/customers")

@@ -1,9 +1,7 @@
 package com.getir.readingisgood.rest.contract;
 
 import com.getir.readingisgood.rest.model.GenericResponse;
-import com.getir.readingisgood.rest.model.OrderResponse;
 import com.getir.readingisgood.rest.model.PurchaseRequest;
-import com.getir.readingisgood.rest.model.PurchaseResponse;
 import io.swagger.annotations.Api;
 import org.springframework.data.domain.Pageable;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Validated
 @RequestMapping("/api/v1/orders")

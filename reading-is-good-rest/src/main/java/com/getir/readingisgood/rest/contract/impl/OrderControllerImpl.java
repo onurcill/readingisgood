@@ -3,9 +3,7 @@ package com.getir.readingisgood.rest.contract.impl;
 import com.getir.readingisgood.rest.contract.OrderController;
 import com.getir.readingisgood.rest.mapper.OrderMapper;
 import com.getir.readingisgood.rest.model.GenericResponse;
-import com.getir.readingisgood.rest.model.OrderResponse;
 import com.getir.readingisgood.rest.model.PurchaseRequest;
-import com.getir.readingisgood.rest.model.PurchaseResponse;
 import com.getir.readingisgood.service.contract.OrderService;
 import com.getir.readingisgood.service.model.OrderDto;
 import com.getir.readingisgood.service.model.PurchaseDto;
@@ -13,7 +11,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 

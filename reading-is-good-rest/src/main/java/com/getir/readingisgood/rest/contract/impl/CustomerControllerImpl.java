@@ -4,9 +4,7 @@ import com.getir.readingisgood.rest.contract.CustomerController;
 import com.getir.readingisgood.rest.mapper.CustomerMapper;
 import com.getir.readingisgood.rest.mapper.OrderMapper;
 import com.getir.readingisgood.rest.model.CustomerRequest;
-import com.getir.readingisgood.rest.model.CustomerResponse;
 import com.getir.readingisgood.rest.model.GenericResponse;
-import com.getir.readingisgood.rest.model.OrderResponse;
 import com.getir.readingisgood.service.contract.CustomerService;
 import com.getir.readingisgood.service.model.CustomerDto;
 import com.getir.readingisgood.service.model.OrderDto;
@@ -14,7 +12,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -49,9 +46,8 @@ public class CustomerControllerImpl implements CustomerController {
     @Override
     public ResponseEntity<GenericResponse> getOrdersByCustomerId(Long id, Pageable pageable) {
         final List<OrderDto> orders = customerService.getOrdersByCustomerId(id, pageable);
-        List<OrderResponse> orderResponseList = orderMapper.toPageOrderResponseFromOrderDto(orders);
         return ResponseEntity.ok(GenericResponse.builder()
-                .data(orderResponseList)
+                .data(orderMapper.toPageOrderResponseFromOrderDto(orders))
                 .success(true)
                 .message("All orders listed for given customer")
                 .build());
