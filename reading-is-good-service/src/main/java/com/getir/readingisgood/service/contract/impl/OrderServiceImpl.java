@@ -31,8 +31,9 @@ public class OrderServiceImpl implements OrderService {
     private final BookRepository bookRepository;
     private final CustomerRepository customerRepository;
     private final OrderRepository orderRepository;
-    private final OrderMapper orderMapper = OrderMapper.INSTANCE;
-    private static final Logger logger = LogManager.getLogger(CustomerServiceImpl.class);
+    private OrderMapper orderMapper = OrderMapper.INSTANCE;
+
+    private static final Logger logger = LogManager.getLogger(OrderServiceImpl.class);
 
     @Autowired
     public OrderServiceImpl(BookRepository bookRepository, CustomerRepository customerRepository, OrderRepository orderRepository) {
@@ -58,19 +59,19 @@ public class OrderServiceImpl implements OrderService {
                     .orElseThrow(() -> new ResourceNotFoundException(ErrorEnum.BOOK_NOT_FOUND, bookId))).ifPresent(book -> {
                 int quantity = book.getUnitsInStock() - item.getQuantity();
                 if (quantity < 0) {
-                    logger.info("Book stock is over for book id: {}", book.getId());
+                    logger.error("Book stock is over for book id: {}", book.getId());
                     throw new BookStockException(ErrorEnum.BOOK_STOCK_NOT_ENOUGH);
                 }
                 book.setUnitsInStock(quantity);
                 bookRepository.save(book);
-                logger.debug("Book is purchased and stock amount: {}, stock updated for book id: {}", quantity, bookId);
+                logger.info("Book is purchased and stock amount: {}, stock updated for book id: {}", quantity, bookId);
                 order.add(item);
             });
         });
 
         CustomerEntity customerFromDb = customerRepository.findByEmailIgnoreCase(purchase.getCustomer().getEmail()).orElseThrow(
                 () -> new ResourceNotFoundException(ErrorEnum.CUSTOMER_NOT_FOUND, purchase.getCustomer().getEmail()));
-        logger.debug("Customer: {}", customerFromDb);
+        logger.info("Customer: {}", customerFromDb);
 
         customerFromDb.add(order);
 
@@ -101,7 +102,7 @@ public class OrderServiceImpl implements OrderService {
         Date endDateTime = Date.from(endDate.toInstant(ZoneOffset.UTC));
 
         Page<OrderEntity> orderEntities = orderRepository.findAllByDateCreatedIsBetween(startDateTime, endDateTime, pageable);
-
+        logger.info("All orders retrieved between {} and {}", startDate,endDate);
         return orderMapper.toOrderDtoPage(orderEntities.getContent());
     }
 

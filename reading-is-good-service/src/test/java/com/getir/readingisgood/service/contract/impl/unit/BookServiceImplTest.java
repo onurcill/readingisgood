@@ -6,6 +6,7 @@ import com.getir.readingisgood.service.contract.impl.BookServiceImpl;
 import com.getir.readingisgood.service.exception.ResourceNotFoundException;
 import com.getir.readingisgood.service.mapper.ServiceBookMapper;
 import com.getir.readingisgood.service.model.BookDto;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -44,6 +45,7 @@ public class BookServiceImplTest {
         when(serviceBookMapper.toBookEntityFromBookDto(any())).thenReturn(bookEntity);
 
         bookServiceImpl.createBook(bookDto);
+        Assert.assertTrue(true);
     }
 
     @Test(expected = ResourceNotFoundException.class)

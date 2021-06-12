@@ -6,12 +6,9 @@ import com.getir.readingisgood.rest.model.BookUpdateRequest;
 import com.getir.readingisgood.rest.model.GenericResponse;
 import com.getir.readingisgood.service.contract.BookService;
 import com.getir.readingisgood.rest.mapper.BookMapper;
-import com.getir.readingisgood.service.exception.ResourceNotFoundException;
-import com.getir.readingisgood.service.model.BookDto;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,7 +26,7 @@ public class BookControllerImpl implements BookController {
     }
 
     @Override
-    public ResponseEntity<?> createBook(BookCreateRequest createOrUpdateBookRequest) {
+    public ResponseEntity<? extends GenericResponse> createBook(BookCreateRequest createOrUpdateBookRequest) {
         bookService.createBook(bookMapper.toBookDtoFromBookCreateUpdateRequest(createOrUpdateBookRequest));
 
         logger.info("Book Created successfully");
@@ -42,7 +39,7 @@ public class BookControllerImpl implements BookController {
     }
 
     @Override
-    public ResponseEntity<?> updateBook(Long id, BookUpdateRequest bookUpdateRequest) {
+    public ResponseEntity<? extends GenericResponse> updateBook(Long id, BookUpdateRequest bookUpdateRequest) {
 
         bookService.updateBook(id, bookMapper.toBookDtoFromBookUpdateRequest(bookUpdateRequest));
         logger.info("Book Updated successfully");

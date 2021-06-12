@@ -7,11 +7,11 @@ public abstract class GenericException extends RuntimeException {
     private final String code;
     private final String message;
 
-    public GenericException(String errorCode, String message) {
+    protected GenericException(String errorCode, String message) {
         this("", errorCode, message);
     }
 
-    public GenericException(String field, String errorCode, String message) {
+    protected GenericException(String field, String errorCode, String message) {
         super(message);
         Objects.requireNonNull(errorCode);
         this.code = errorCode;
@@ -27,6 +27,7 @@ public abstract class GenericException extends RuntimeException {
         return this.code;
     }
 
+    @Override
     public String getMessage() {
         return this.message;
     }

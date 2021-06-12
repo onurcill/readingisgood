@@ -1,0 +1,2151 @@
+{
+	"info": {
+		"_postman_id": "052ba28a-0d5d-4014-8ed1-bdecb45bdc10",
+		"name": "Api Documentation",
+		"description": "Api Documentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1",
+			"item": [
+				{
+					"name": "books",
+					"item": [
+						{
+							"name": "createBook",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "JWT",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\": \"nostrud ea eiusmod elit exercitation\",\n    \"name\": \"Ut proident\",\n    \"unitPrice\": 64384247.22065964,\n    \"unitsInStock\": 61081694\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/books",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"books"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"nostrud ea eiusmod elit exercitation\",\n    \"name\": \"Ut proident\",\n    \"unitPrice\": 64384247.22065964,\n    \"unitsInStock\": 61081694\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"nostrud ea eiusmod elit exercitation\",\n    \"name\": \"Ut proident\",\n    \"unitPrice\": 64384247.22065964,\n    \"unitsInStock\": 61081694\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"nostrud ea eiusmod elit exercitation\",\n    \"name\": \"Ut proident\",\n    \"unitPrice\": 64384247.22065964,\n    \"unitsInStock\": 61081694\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"nostrud ea eiusmod elit exercitation\",\n    \"name\": \"Ut proident\",\n    \"unitPrice\": 64384247.22065964,\n    \"unitsInStock\": 61081694\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"description\": \"nostrud ea eiusmod elit exercitation\",\n    \"name\": \"Ut proident\",\n    \"unitPrice\": 64384247.22065964,\n    \"unitsInStock\": 61081694\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "updateBook",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "JWT",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"unitsInStock\": 66342511\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/books/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"books",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "60851629",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"unitsInStock\": 66342511\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"unitsInStock\": 66342511\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"unitsInStock\": 66342511\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"unitsInStock\": 66342511\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/books/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"books",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "customers",
+					"item": [
+						{
+							"name": "createCustomer",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "JWT",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"cillum ut aliqua\",\n    \"firstName\": \"esse sunt deserunt in\",\n    \"lastName\": \"in\",\n    \"phone\": \"Lorem consequat occaecat laborum aute\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/customers",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"cillum ut aliqua\",\n    \"firstName\": \"esse sunt deserunt in\",\n    \"lastName\": \"in\",\n    \"phone\": \"Lorem consequat occaecat laborum aute\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"cillum ut aliqua\",\n    \"firstName\": \"esse sunt deserunt in\",\n    \"lastName\": \"in\",\n    \"phone\": \"Lorem consequat occaecat laborum aute\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"cillum ut aliqua\",\n    \"firstName\": \"esse sunt deserunt in\",\n    \"lastName\": \"in\",\n    \"phone\": \"Lorem consequat occaecat laborum aute\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"cillum ut aliqua\",\n    \"firstName\": \"esse sunt deserunt in\",\n    \"lastName\": \"in\",\n    \"phone\": \"Lorem consequat occaecat laborum aute\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"cillum ut aliqua\",\n    \"firstName\": \"esse sunt deserunt in\",\n    \"lastName\": \"in\",\n    \"phone\": \"Lorem consequat occaecat laborum aute\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getOrdersByCustomerId",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "JWT",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/customers/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"customers",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "60851629",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/customers/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"customers",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "getOrdersByDateInterval",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "JWT",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/orders?startDate=1994-08-28T12:21:53.421Z&endDate=1994-08-28T12:21:53.421Z",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "1994-08-28T12:21:53.421Z",
+											"description": "(Required) startDate"
+										},
+										{
+											"key": "endDate",
+											"value": "1994-08-28T12:21:53.421Z",
+											"description": "(Required) endDate"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders?startDate=1994-08-28T12:21:53.421Z&endDate=1994-08-28T12:21:53.421Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											],
+											"query": [
+												{
+													"key": "startDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												},
+												{
+													"key": "endDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders?startDate=1994-08-28T12:21:53.421Z&endDate=1994-08-28T12:21:53.421Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											],
+											"query": [
+												{
+													"key": "startDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												},
+												{
+													"key": "endDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders?startDate=1994-08-28T12:21:53.421Z&endDate=1994-08-28T12:21:53.421Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											],
+											"query": [
+												{
+													"key": "startDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												},
+												{
+													"key": "endDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders?startDate=1994-08-28T12:21:53.421Z&endDate=1994-08-28T12:21:53.421Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											],
+											"query": [
+												{
+													"key": "startDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												},
+												{
+													"key": "endDate",
+													"value": "1994-08-28T12:21:53.421Z"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "processOrder",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "JWT",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"customer\": {\n        \"email\": \"culpa laboris\",\n        \"firstName\": \"incididunt cillum laborum laboris\",\n        \"id\": 42429976,\n        \"lastName\": \"Excepteur commodo occaecat do\",\n        \"orders\": [\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"2009-06-05T13:17:47.740Z\",\n                \"id\": -31141677,\n                \"orderItems\": [\n                    {\n                        \"bookId\": -67820157,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": -85159996,\n                        \"unitPrice\": -41755398.28614068\n                    },\n                    {\n                        \"bookId\": 8065290,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 78281414,\n                        \"unitPrice\": -48775385.724283546\n                    }\n                ],\n                \"orderTrackingNumber\": \"nulla ad in\",\n                \"status\": \"IN_PROGRESS\",\n                \"totalPrice\": 97794193.23517126,\n                \"totalQuantity\": -11545371\n            },\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1961-05-02T14:52:55.221Z\",\n                \"id\": -63492795,\n                \"orderItems\": [\n                    {\n                        \"bookId\": -95991559,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": -93940605,\n                        \"unitPrice\": 4723839.847617567\n                    },\n                    {\n                        \"bookId\": -31118279,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": -873278,\n                        \"unitPrice\": -41276431.58311254\n                    }\n                ],\n                \"orderTrackingNumber\": \"minim reprehenderit ad in\",\n                \"status\": \"IN_PROGRESS\",\n                \"totalPrice\": -91394072.1152295,\n                \"totalQuantity\": -84311275\n            }\n        ],\n        \"phone\": \"amet ex\",\n        \"registeredAt\": \"1955-09-09T08:40:17.851Z\"\n    },\n    \"order\": {\n        \"orderTrackingNumber\": \"adipi\",\n        \"status\": \"IN_PROGRESS\",\n        \"totalPrice\": -87585818.69230406,\n        \"totalQuantity\": -75643509\n    },\n    \"orderItems\": [\n        {\n            \"bookId\": 17475177,\n            \"quantity\": 47620569,\n            \"unitPrice\": 74027456.36188209\n        },\n        {\n            \"bookId\": 79435660,\n            \"quantity\": -29022942,\n            \"unitPrice\": 94564065.98364148\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/orders",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"customer\": {\n        \"email\": \"eu ipsum et\",\n        \"firstName\": \"amet et in\",\n        \"id\": 15914492,\n        \"lastName\": \"voluptate deserunt mollit fugiat\",\n        \"orders\": [\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1966-03-15T19:52:10.397Z\",\n                \"id\": 3782197,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 40215372,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 28458869,\n                        \"unitPrice\": 60351778.95744934\n                    },\n                    {\n                        \"bookId\": 31777672,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 90460554,\n                        \"unitPrice\": 13690442.59825176\n                    }\n                ],\n                \"orderTrackingNumber\": \"officia ut\",\n                \"status\": \"COMPLETED\",\n                \"totalPrice\": 20865936.98784393,\n                \"totalQuantity\": 38369138\n            },\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1981-01-12T05:32:14.833Z\",\n                \"id\": 53309476,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 4970367,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 66381094,\n                        \"unitPrice\": 32547090.40911883\n                    },\n                    {\n                        \"bookId\": 12482486,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 42901600,\n                        \"unitPrice\": 33909044.807015404\n                    }\n                ],\n                \"orderTrackingNumber\": \"et esse dolore reprehenderit\",\n                \"status\": \"IN_PROGRESS\",\n                \"totalPrice\": 37122137.00286151,\n                \"totalQuantity\": 82571768\n            }\n        ],\n        \"phone\": \"dolore reprehenderit officia Duis\",\n        \"registeredAt\": \"1971-06-04T01:17:52.893Z\"\n    },\n    \"order\": {\n        \"orderTrackingNumber\": \"irure mollit\",\n        \"status\": \"IN_PROGRESS\",\n        \"totalPrice\": 8879988.048204541,\n        \"totalQuantity\": 69635683\n    },\n    \"orderItems\": [\n        {\n            \"bookId\": 89367180,\n            \"quantity\": 31486733,\n            \"unitPrice\": 7097003.133177444\n        },\n        {\n            \"bookId\": 27741053,\n            \"quantity\": 79411428,\n            \"unitPrice\": 83503392.10650074\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"customer\": {\n        \"email\": \"eu ipsum et\",\n        \"firstName\": \"amet et in\",\n        \"id\": 15914492,\n        \"lastName\": \"voluptate deserunt mollit fugiat\",\n        \"orders\": [\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1966-03-15T19:52:10.397Z\",\n                \"id\": 3782197,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 40215372,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 28458869,\n                        \"unitPrice\": 60351778.95744934\n                    },\n                    {\n                        \"bookId\": 31777672,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 90460554,\n                        \"unitPrice\": 13690442.59825176\n                    }\n                ],\n                \"orderTrackingNumber\": \"officia ut\",\n                \"status\": \"COMPLETED\",\n                \"totalPrice\": 20865936.98784393,\n                \"totalQuantity\": 38369138\n            },\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1981-01-12T05:32:14.833Z\",\n                \"id\": 53309476,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 4970367,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 66381094,\n                        \"unitPrice\": 32547090.40911883\n                    },\n                    {\n                        \"bookId\": 12482486,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 42901600,\n                        \"unitPrice\": 33909044.807015404\n                    }\n                ],\n                \"orderTrackingNumber\": \"et esse dolore reprehenderit\",\n                \"status\": \"IN_PROGRESS\",\n                \"totalPrice\": 37122137.00286151,\n                \"totalQuantity\": 82571768\n            }\n        ],\n        \"phone\": \"dolore reprehenderit officia Duis\",\n        \"registeredAt\": \"1971-06-04T01:17:52.893Z\"\n    },\n    \"order\": {\n        \"orderTrackingNumber\": \"irure mollit\",\n        \"status\": \"IN_PROGRESS\",\n        \"totalPrice\": 8879988.048204541,\n        \"totalQuantity\": 69635683\n    },\n    \"orderItems\": [\n        {\n            \"bookId\": 89367180,\n            \"quantity\": 31486733,\n            \"unitPrice\": 7097003.133177444\n        },\n        {\n            \"bookId\": 27741053,\n            \"quantity\": 79411428,\n            \"unitPrice\": 83503392.10650074\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"customer\": {\n        \"email\": \"eu ipsum et\",\n        \"firstName\": \"amet et in\",\n        \"id\": 15914492,\n        \"lastName\": \"voluptate deserunt mollit fugiat\",\n        \"orders\": [\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1966-03-15T19:52:10.397Z\",\n                \"id\": 3782197,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 40215372,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": -28458869,\n                        \"unitPrice\": -60351778.95744934\n                    },\n                    {\n                        \"bookId\": 31777672,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": -90460554,\n                        \"unitPrice\": -13690442.59825176\n                    }\n                ],\n                \"orderTrackingNumber\": \"officia ut\",\n                \"status\": \"COMPLETED\",\n                \"totalPrice\": 20865936.98784393,\n                \"totalQuantity\": 38369138\n            },\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1981-01-12T05:32:14.833Z\",\n                \"id\": -53309476,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 4970367,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 66381094,\n                        \"unitPrice\": -32547090.40911883\n                    },\n                    {\n                        \"bookId\": -12482486,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 42901600,\n                        \"unitPrice\": 33909044.807015404\n                    }\n                ],\n                \"orderTrackingNumber\": \"et esse dolore reprehenderit\",\n                \"status\": \"IN_PROGRESS\",\n                \"totalPrice\": -37122137.00286151,\n                \"totalQuantity\": -82571768\n            }\n        ],\n        \"phone\": \"dolore reprehenderit officia Duis\",\n        \"registeredAt\": \"1971-06-04T01:17:52.893Z\"\n    },\n    \"order\": {\n        \"orderTrackingNumber\": \"irure mollit\",\n        \"status\": \"IN_PROGRESS\",\n        \"totalPrice\": 8879988.048204541,\n        \"totalQuantity\": 69635683\n    },\n    \"orderItems\": [\n        {\n            \"bookId\": 89367180,\n            \"quantity\": 31486733,\n            \"unitPrice\": -7097003.133177444\n        },\n        {\n            \"bookId\": 27741053,\n            \"quantity\": -79411428,\n            \"unitPrice\": -83503392.10650074\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"customer\": {\n        \"email\": \"eu ipsum et\",\n        \"firstName\": \"amet et in\",\n        \"id\": 15914492,\n        \"lastName\": \"voluptate deserunt mollit fugiat\",\n        \"orders\": [\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1966-03-15T19:52:10.397Z\",\n                \"id\": 3782197,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 40215372,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 28458869,\n                        \"unitPrice\": 60351778.95744934\n                    },\n                    {\n                        \"bookId\": 31777672,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 90460554,\n                        \"unitPrice\": 13690442.59825176\n                    }\n                ],\n                \"orderTrackingNumber\": \"officia ut\",\n                \"status\": \"COMPLETED\",\n                \"totalPrice\": 20865936.98784393,\n                \"totalQuantity\": 38369138\n            },\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1981-01-12T05:32:14.833Z\",\n                \"id\": 53309476,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 4970367,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 66381094,\n                        \"unitPrice\": 32547090.40911883\n                    },\n                    {\n                        \"bookId\": 12482486,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 42901600,\n                        \"unitPrice\": 33909044.807015404\n                    }\n                ],\n                \"orderTrackingNumber\": \"et esse dolore reprehenderit\",\n                \"status\": \"IN_PROGRESS\",\n                \"totalPrice\": 37122137.00286151,\n                \"totalQuantity\": 82571768\n            }\n        ],\n        \"phone\": \"dolore reprehenderit officia Duis\",\n        \"registeredAt\": \"1971-06-04T01:17:52.893Z\"\n    },\n    \"order\": {\n        \"orderTrackingNumber\": \"irure mollit\",\n        \"status\": \"IN_PROGRESS\",\n        \"totalPrice\": 8879988.048204541,\n        \"totalQuantity\": 69635683\n    },\n    \"orderItems\": [\n        {\n            \"bookId\": 89367180,\n            \"quantity\": 31486733,\n            \"unitPrice\": 7097003.133177444\n        },\n        {\n            \"bookId\": 27741053,\n            \"quantity\": 79411428,\n            \"unitPrice\": 83503392.10650074\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"customer\": {\n        \"email\": \"eu ipsum et\",\n        \"firstName\": \"amet et in\",\n        \"id\": 15914492,\n        \"lastName\": \"voluptate deserunt mollit fugiat\",\n        \"orders\": [\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1966-03-15T19:52:10.397Z\",\n                \"id\": 3782197,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 40215372,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 28458869,\n                        \"unitPrice\": 60351778.95744934\n                    },\n                    {\n                        \"bookId\": 31777672,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 90460554,\n                        \"unitPrice\": 13690442.59825176\n                    }\n                ],\n                \"orderTrackingNumber\": \"officia ut\",\n                \"status\": \"COMPLETED\",\n                \"totalPrice\": 20865936.98784393,\n                \"totalQuantity\": 38369138\n            },\n            {\n                \"customer\": {\n                    \"value\": \"<Circular reference to #/components/schemas/CustomerDto detected>\"\n                },\n                \"dateCreated\": \"1981-01-12T05:32:14.833Z\",\n                \"id\": 53309476,\n                \"orderItems\": [\n                    {\n                        \"bookId\": 4970367,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 66381094,\n                        \"unitPrice\": 32547090.40911883\n                    },\n                    {\n                        \"bookId\": 12482486,\n                        \"order\": {\n                            \"value\": \"<Circular reference to #/components/schemas/OrderDto detected>\"\n                        },\n                        \"quantity\": 42901600,\n                        \"unitPrice\": 33909044.807015404\n                    }\n                ],\n                \"orderTrackingNumber\": \"et esse dolore reprehenderit\",\n                \"status\": \"IN_PROGRESS\",\n                \"totalPrice\": 37122137.00286151,\n                \"totalQuantity\": 82571768\n            }\n        ],\n        \"phone\": \"dolore reprehenderit officia Duis\",\n        \"registeredAt\": \"1971-06-04T01:17:52.893Z\"\n    },\n    \"order\": {\n        \"orderTrackingNumber\": \"irure mollit\",\n        \"status\": \"IN_PROGRESS\",\n        \"totalPrice\": 8879988.048204541,\n        \"totalQuantity\": 69635683\n    },\n    \"orderItems\": [\n        {\n            \"bookId\": 89367180,\n            \"quantity\": 31486733,\n            \"unitPrice\": 7097003.133177444\n        },\n        {\n            \"bookId\": 27741053,\n            \"quantity\": 79411428,\n            \"unitPrice\": 83503392.10650074\n        }\n    ]\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "getOrderById",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "key",
+											"value": "JWT",
+											"type": "string"
+										},
+										{
+											"key": "value",
+											"value": true,
+											"type": "boolean"
+										},
+										{
+											"key": "in",
+											"value": "header",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/orders/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"orders",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "60851629",
+											"description": "(Required) id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Forbidden",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"description": "Added as a part of security scheme: apikey",
+												"key": "JWT",
+												"value": "<API Key>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/orders/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"orders",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "JWT",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/authorization?email=pariatur ullamco&password=pariatur ullamco",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"authorization"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "pariatur ullamco",
+									"description": "(Required) email"
+								},
+								{
+									"key": "password",
+									"value": "pariatur ullamco",
+									"description": "(Required) password"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/authorization?email=pariatur ullamco&password=pariatur ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"authorization"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "pariatur ullamco"
+										},
+										{
+											"key": "password",
+											"value": "pariatur ullamco"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "pariatur ullamco"
+						},
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/authorization?email=pariatur ullamco&password=pariatur ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"authorization"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "pariatur ullamco"
+										},
+										{
+											"key": "password",
+											"value": "pariatur ullamco"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/authorization?email=pariatur ullamco&password=pariatur ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"authorization"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "pariatur ullamco"
+										},
+										{
+											"key": "password",
+											"value": "pariatur ullamco"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/authorization?email=pariatur ullamco&password=pariatur ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"authorization"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "pariatur ullamco"
+										},
+										{
+											"key": "password",
+											"value": "pariatur ullamco"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/authorization?email=pariatur ullamco&password=pariatur ullamco",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"authorization"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "pariatur ullamco"
+										},
+										{
+											"key": "password",
+											"value": "pariatur ullamco"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "getCustomerMonthlyStatistics",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "key",
+									"value": "JWT",
+									"type": "string"
+								},
+								{
+									"key": "value",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/statistics/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"statistics",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60851629",
+									"description": "(Required) id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/statistics/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"statistics",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/statistics/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"statistics",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Forbidden",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/statistics/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"statistics",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Not Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"description": "Added as a part of security scheme: apikey",
+										"key": "JWT",
+										"value": "<API Key>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/statistics/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"statistics",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "//localhost:8080/",
+			"type": "string"
+		}
+	]
+}
