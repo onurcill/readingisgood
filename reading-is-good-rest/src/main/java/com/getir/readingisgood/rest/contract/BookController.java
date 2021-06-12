@@ -15,8 +15,8 @@ import javax.validation.Valid;
 @Api(tags = "Book")
 public interface BookController {
     @PostMapping
-    ResponseEntity<?> createBook(@RequestBody @Valid BookCreateRequest createOrUpdateBookRequest);
+    ResponseEntity<? extends GenericResponse> createBook(@RequestBody @Valid BookCreateRequest createOrUpdateBookRequest);
     @PatchMapping("/{id}")
-    ResponseEntity<?> updateBook(@PathVariable Long id,
+    ResponseEntity<? extends GenericResponse> updateBook(@PathVariable Long id,
                                                @RequestBody @Valid BookUpdateRequest bookUpdateRequest);
 }

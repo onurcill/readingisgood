@@ -14,6 +14,7 @@
     <packaging>jar</packaging>
     <name>ReadingIsGood Project Rest Module</name>
     <dependencies>
+        <!-- Spring libs -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -30,6 +31,7 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-core</artifactId>
         </dependency>
+        <!-- reading-is-good service module-->
         <dependency>
             <groupId>com.getir</groupId>
             <artifactId>reading-is-good-service</artifactId>
@@ -40,6 +42,7 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
+        <!-- Mapper -->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
@@ -48,6 +51,7 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
         </dependency>
+        <!-- Swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -61,6 +65,18 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <!-- exclude junit 4 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>junit</groupId>
+                    <artifactId>junit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 

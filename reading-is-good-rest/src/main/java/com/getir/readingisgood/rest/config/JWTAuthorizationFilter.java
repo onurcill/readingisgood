@@ -19,15 +19,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class JWTAuthorizationFilter extends OncePerRequestFilter {
-    private final String PREFIX = "Bearer ";
-    private final String SECRET = "readingIsGoodSecretKey";
-    private final String HEADER = "JWT";
+    private static final String PREFIX = "Bearer ";
+    private static final String SECRET = "readingIsGoodSecretKey";
+    private static final String HEADER = "JWT";
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws ServletException, IOException {
         try {
-            if (checkJWTToken(request, response)) {
+            if (checkJWTToken(request)) {
                 Claims claims = validateToken(request);
                 if (claims.get("authorities") != null) {
                     setUpSpringAuthentication(claims);
@@ -61,7 +61,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 
     }
 
-    private boolean checkJWTToken(HttpServletRequest request, HttpServletResponse res) {
+    private boolean checkJWTToken(HttpServletRequest request) {
         String authenticationHeader = request.getHeader(HEADER);
         if (authenticationHeader == null || !authenticationHeader.startsWith(PREFIX)) {
             return false;

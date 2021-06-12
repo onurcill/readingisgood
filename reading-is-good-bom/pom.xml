@@ -16,6 +16,8 @@
         <mapstruct-version>1.4.1.Final</mapstruct-version>
         <springfox.swagger2-version>2.6.1</springfox.swagger2-version>
         <jjwt-version>0.7.0</jjwt-version>
+        <mockito-version>2.15.0</mockito-version>
+        <junit-version>4.12</junit-version>
     </properties>
 
     <dependencyManagement>
@@ -40,6 +42,28 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${spring.boot-version}</version>
                 <scope>test</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit-version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>${mockito-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-inline</artifactId>
+                <version>${mockito-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>

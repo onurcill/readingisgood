@@ -12,7 +12,6 @@ import com.getir.readingisgood.service.model.OrderDto;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -44,8 +43,7 @@ public class CustomerControllerImpl implements CustomerController {
 
     @Override
     public ResponseEntity<List<OrderResponse>> getOrdersByCustomerId(Long id, Pageable pageable) {
-        final Page<OrderDto> orders = customerService.getOrdersByCustomerId(id, pageable);
-        List<OrderDto> orderList = orders.getContent();
-        return ResponseEntity.ok(orderMapper.toPageOrderResponseFromOrderDto(orderList));
+        final List<OrderDto> orders = customerService.getOrdersByCustomerId(id, pageable);
+        return ResponseEntity.ok(orderMapper.toPageOrderResponseFromOrderDto(orders));
     }
 }
