@@ -7,6 +7,8 @@ import com.getir.readingisgood.service.mapper.ServiceBookMapper;
 import com.getir.readingisgood.service.model.BookDto;
 import com.getir.readingisgood.data.model.BookEntity;
 import com.getir.readingisgood.data.repository.BookRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +19,9 @@ import java.util.Optional;
 public class BookServiceImpl implements BookService {
 
     private final BookRepository bookRepository;
-    private final ServiceBookMapper serviceBookMapper = ServiceBookMapper.INSTANCE;
+    private ServiceBookMapper serviceBookMapper = ServiceBookMapper.INSTANCE;
+
+    private static final Logger logger = LogManager.getLogger(BookServiceImpl.class);
 
     @Autowired
     public BookServiceImpl(BookRepository bookRepository) {
@@ -27,15 +31,19 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional
     public void createBook(BookDto bookDto) {
+        logger.info("Book {} created successfully when {}",bookDto.getId(),bookDto.getDateCreated());
         bookRepository.save(serviceBookMapper.toBookEntityFromBookDto(bookDto));
     }
 
     @Override
     public void updateBook(Long id, BookDto bookDto) {
-        Optional<BookEntity> bookFromDb = Optional.ofNullable(
+        Optional<BookEntity> bookEntity = Optional.ofNullable(
                 bookRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException(ErrorEnum.BOOK_NOT_FOUND, id)));
 
-        bookFromDb.get().setUnitsInStock(bookDto.getUnitsInStock());
-        bookRepository.save(bookFromDb.get());
+        if(bookEntity.isPresent()){
+            bookEntity.get().setUnitsInStock(bookDto.getUnitsInStock());
+            logger.info("Book {} updated successfully when {} with new stock info {}",bookDto.getId(),bookDto.getDateCreated(),bookDto.getUnitsInStock());
+            bookRepository.save(bookEntity.get());
+        }
     }
 }

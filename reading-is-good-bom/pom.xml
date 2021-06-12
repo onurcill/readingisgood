@@ -16,6 +16,8 @@
         <mapstruct-version>1.4.1.Final</mapstruct-version>
         <springfox.swagger2-version>2.6.1</springfox.swagger2-version>
         <jjwt-version>0.7.0</jjwt-version>
+        <mockito-version>2.15.0</mockito-version>
+        <junit-version>4.12</junit-version>
     </properties>
 
     <dependencyManagement>
@@ -50,18 +52,18 @@
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>4.12</version>
+                <version>${junit-version}</version>
                 <scope>compile</scope>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
-                <version>2.15.0</version>
+                <version>${mockito-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-inline</artifactId>
-                <version>2.15.0</version>
+                <version>${mockito-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
